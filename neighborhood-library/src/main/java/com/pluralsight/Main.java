@@ -27,7 +27,8 @@ public class Main {
                 new Book(17, "978-0-13-595705-4", "Book Title 17", false, ""),
                 new Book(18, "978-0-672-33537-5", "Book Title 18", false, ""),
                 new Book(19, "978-0-12-385003-0", "Book Title 19", false, ""),
-                new Book(20, "978-0-13-595705-3", "Book Title 20", false, "")
+                new Book(20, "978-0-13-595705-3", "Book Title 20", false, ""),
+                new Book(20, "978-0-13-595705-3", "Book Title 21", false, "")
         };
 
         //calling homescreen and passing books object
