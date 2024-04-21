@@ -56,13 +56,14 @@ public class Book {
     }
 
     public void checkOut(String name){
-            this.isCheckedOut = true;
-            this.checkedOutTo = name;
-            System.out.println(this.title + " is checked out to " + this.checkedOutTo);
+        this.isCheckedOut = true;
+        this.checkedOutTo = name;
+        System.out.println();
+        System.out.println(this.title + " is checked out to " + this.checkedOutTo);
     }
 
     public void checkIn(){
-
+        System.out.println(this.getCheckedOutTo() + " checked in " + this.getTitle());
         this.isCheckedOut = false;
         this.checkedOutTo = "";
     }
