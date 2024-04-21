@@ -1,6 +1,6 @@
 # neighborhood-library
 ## Over view of the project
-I am making a project for my neighbor hood library and the library should allow the customer to check out a book and also check in. The checked out book will keep track of the person's name. When ever the person checks in the book he will not be tracked in the system anymore. 
+I am making a project for my neighbor hood library and the library should allow the customer to check out a book and also check in. The checked out book will keep track of the person's name. When ever the person checks in the book they will not be tracked in the system anymore. 
 
 I created a book class to allow me to make an array of objects from books
 ![classes](images/Classes.png)
