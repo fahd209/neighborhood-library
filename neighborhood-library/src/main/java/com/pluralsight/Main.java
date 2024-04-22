@@ -7,26 +7,26 @@ public class Main {
 
     public static void main(String[] args) {
         Book[] books = {
-                new Book(1, "978-0-12-385003-4", "The Great Gatsby by F. Scott Fitzgerald", false, ""),
-                new Book(2, "978-0-13-595705-9", "To Kill a Mockingbird by Harper Lee", false, ""),
-                new Book(3, "978-0-672-33537-2", "1984 by George Orwell", false, ""),
-                new Book(4, "978-0-12-385003-5", "Pride and Prejudice by Jane Austen", false, ""),
-                new Book(5, "978-0-13-595705-8", "The Catcher in the Rye by J.D. Salinger", false, ""),
-                new Book(6, "978-0-672-33537-1", "Harry Potter and the Sorcerer's Stone by J.K. Rowling", false, ""),
-                new Book(7, "978-0-12-385003-6", "The Lord of the Rings by J.R.R. Tolkien", false, ""),
-                new Book(8, "978-0-13-595705-7", "Animal Farm by George Orwell", false, ""),
-                new Book(9, "978-0-672-33537-0", "The Hobbit by J.R.R. Tolkien", false, ""),
-                new Book(10, "978-0-12-385003-7", "The Chronicles of Narnia by C.S. Lewis", false, ""),
-                new Book(11, "978-0-13-595705-6", "The Hunger Games by Suzanne Collins", false, ""),
-                new Book(12, "978-0-672-33537-3", "Catch-22 by Joseph Heller", false, ""),
-                new Book(13, "978-0-12-385003-8", "Brave New World by Aldous Huxley", false, ""),
-                new Book(14, "978-0-13-595705-5", "The Da Vinci Code by Dan Brown", false, ""),
-                new Book(15, "978-0-672-33537-4", "The Alchemist by Paulo Coelho", false, ""),
-                new Book(16, "978-0-12-385003-9", "Lord of the Flies by William Golding", false, ""),
-                new Book(17, "978-0-13-595705-4", "Moby-Dick by Herman Melville", false, ""),
-                new Book(18, "978-0-672-33537-5", "A Tale of Two Cities by Charles Dickens", false, ""),
-                new Book(19, "978-0-12-385003-0", "The Grapes of Wrath by John Steinbeck", false, ""),
-                new Book(20, "978-0-13-595705-3", "Frankenstein by Mary Shelley", false, ""),
+                new Book(1, "978-0-12-385003-4", "\"The Shadow of the Wind\" by Carlos Ruiz Zafón", false, ""),
+                new Book(2, "978-0-13-595705-9", "\"1984\" by George Orwell", false, ""),
+                new Book(3, "978-0-672-33537-2", "\"The Great Gatsby\" by F. Scott Fitzgerald", false, ""),
+                new Book(4, "978-0-12-385003-5", "\"To Kill a Mockingbird\" by Harper Lee", false, ""),
+                new Book(5, "978-0-13-595705-8", "\"Harry Potter and the Philosopher's Stone\" by J.K. Rowling", false, ""),
+                new Book(6, "978-0-672-33537-1", "\"The Catcher in the Rye\" by J.D. Salinger", false, ""),
+                new Book(7, "978-0-12-385003-6", "\"Pride and Prejudice\" by Jane Austen", false, ""),
+                new Book(8, "978-0-13-595705-7", "\"The Lord of the Rings\" by J.R.R. Tolkien", false, ""),
+                new Book(9, "978-0-672-33537-0", "\"The Hunger Games\" by Suzanne Collins", false, ""),
+                new Book(10, "978-0-12-385003-7", "\"The Da Vinci Code\" by Dan Brown", false, ""),
+                new Book(11, "978-0-13-595705-6", "\"The Hitchhiker's Guide to the Galaxy\" by Douglas Adams", false, ""),
+                new Book(12, "978-0-672-33537-3", "\"The Alchemist\" by Paulo Coelho", false, ""),
+                new Book(13, "978-0-12-385003-8", "\"The Handmaid's Tale\" by Margaret Atwood", false, ""),
+                new Book(14, "978-0-13-595705-5", "\"A Game of Thrones\" by George R.R. Martin", false, ""),
+                new Book(15, "978-0-672-33537-4", "\"The Chronicles of Narnia\" by C.S. Lewis", false, ""),
+                new Book(16, "978-0-12-385003-9", "\"Brave New World\" by Aldous Huxley", false, ""),
+                new Book(17, "978-0-13-595705-4", "\"Gone Girl\" by Gillian Flynn", false, ""),
+                new Book(18, "978-0-672-33537-5", "\"The Girl with the Dragon Tattoo\" by Stieg Larsson", false, ""),
+                new Book(19, "978-0-12-385003-0", "\"The Road\" by Cormac McCarthy", false, ""),
+                new Book(20, "978-0-13-595705-3", "\"The Kite Runner\" by Khaled Hosseini", false, ""),
         };
 
         //calling home screen and passing books object
@@ -37,7 +37,7 @@ public class Main {
 
         String input = "";
         int choice = 0;
-            // while choice is not 3 it will not exit the applicaton
+            // while choice is not 3 it will not exit the application
             while(choice != 3) {
                 // displaying home screen
                 System.out.println();
@@ -84,6 +84,7 @@ public class Main {
         for(int i = 0; i < books.length; i++){
             if(!books[i].isCheckedOut()){
                 System.out.printf("Id: %d, Isbn: %s, Title: %s \n", books[i].getId(), books[i].getIsbn(), books[i].getTitle());
+                System.out.println("-----------------------------------------------------------------------------------------------");
                 foundAvailableBooks = true;
             }
         }
@@ -132,6 +133,7 @@ public class Main {
         for(int i = 0; i < books.length; i++){
             if(id == books[i].getId()){
                 books[i].checkOut(name);
+
             }
         }
         homeScreen(books);
@@ -150,6 +152,7 @@ public class Main {
             if(books[i].isCheckedOut()){
                 System.out.println();
                 System.out.printf("Id: %d, Isbn: %s, Title: %s, Checked out to: %s \n", books[i].getId(), books[i].getIsbn(), books[i].getTitle(), books[i].getCheckedOutTo());
+                System.out.println("------------------------------------------------------------------------");
                 foundCheckedOutBooks = true;
             }
         }
@@ -185,7 +188,7 @@ public class Main {
     }
 
     public static void checkInBook(Book[] books){
-
+        // getting user id to search for the book and check it in
         System.out.println();
         System.out.println("Enter the id of the book you would like to check in: ");
         int id = userInput.nextInt();
