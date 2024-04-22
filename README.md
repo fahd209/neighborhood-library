@@ -6,6 +6,9 @@ I created a book class to allow me to make an array of objects from books
 ![classes](images/Classes.png)
 
 ## Screens
+
+Screens Sketch
+![sketch](images/screensSketch.png)
 ### Home screen 
 The home screen is going to prompt the user to show available books, Show checked out books, and Exit if the user clicks exit it will stop the program. if a user enters 1 it will take them to the Show available books screen. If a user enter's 2 it will display the checked out screen.
 
@@ -200,7 +203,7 @@ when your in the home screen the application will prompt you to show available b
 
 * 1. Enter 1 to show available all the available books
 * 2. Enter 2 to show the checked out books
-* 3. To exit the application
+* 3. Enter 3 to exit the application
 
 
 ### Availablty screen
